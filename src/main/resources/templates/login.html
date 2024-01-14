@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/login.css}">
+<style>
+.bordered1 {
+	width: 1230px;
+	height: 600px;
+	padding: 30px;
+	border: 10px outset black;
+}
+</style>
+<body class=bordered1>
+     <h1  align= center style="border:red; border-width:8px; color:black;border-style:solid">Welcome to login page....</h1> 
+	<br>
+	<br>
+	<br>
+	<div class=bordered align=center>
+</head>
+<h1>USER LOGIN: </h1>
+<form action ="validate" method="post" style ="color:purple;">
+<label>Email:</label>
+<input type="email" name ="email"/>
+<br><br>
+<label>Password:</label>
+<input type="password" name ="password"/>
+<br><br>
+<input type ="submit" value ="LOGIN"/>
+</form>
+</div>
+</body>
+</html>

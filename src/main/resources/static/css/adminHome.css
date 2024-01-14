@@ -1,0 +1,9 @@
+body{
+	background-color:navajpwhite;
+}
+bordered1 {
+	width:1170px;
+	height:600px;
+	padding:30px;
+	border:10px outset black;
+}
