@@ -4,10 +4,35 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-<h1>Customer home</h1>
+<body style="background-color: mediumspringgreen">
+<div align="center">
+<h1 style="color: deeppink">Customer Page</h1>
+<br>
+<br>
+<div th:unless="${isPremium}" class="non-premium">
 <a href="pay">Get premium</a>
 <br>
 <a href ="logout">LOGOUT</a>
+</div>
+<div th:if="${isPremium}" class="premium">
+<table border>
+<thead>
+<tr>
+<th>Name</th>
+<th>Artist</th>
+<th>Genre</th>
+<th>Play</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="song:${songs}">
+<td th:text="${song.name}"></td>
+<td th:text="${song.artist}"></td>
+<td th:text="${song.genre}"></td>
+<td><audio controls></audio>
+<source th:src="${song.link}" type="audio/mpeg">
+</audio></td>
+</tr>
+</table>
 </body>
 </html>

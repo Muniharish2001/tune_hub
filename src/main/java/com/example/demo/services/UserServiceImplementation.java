@@ -62,5 +62,11 @@ public class UserServiceImplementation implements UsersService{
 		// TODO Auto-generated method stub
 		return repo.findByEmail(email);
 	}
+
+	@Override
+	public Object fetchAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 	

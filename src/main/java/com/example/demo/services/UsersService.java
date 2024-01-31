@@ -15,6 +15,8 @@ public interface UsersService {
 	public void updateUser(Users user);
 
 	public Users getUser(String email);
+
+	public Object fetchAll();
 	
 	
 

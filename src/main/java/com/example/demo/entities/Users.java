@@ -83,6 +83,10 @@ public class Users {
 		// TODO Auto-generated method stub
 		
 	}
+	public boolean isPremium() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 	
 }

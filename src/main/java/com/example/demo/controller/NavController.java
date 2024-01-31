@@ -19,5 +19,8 @@ public class NavController {
     public String newSong() {
     	return "newSong";
     }
-
+@GetMapping("/logg")
+public String logg() {
+	return "login";
+}
 }

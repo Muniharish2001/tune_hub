@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 	
-	<title>View Course</title>
+	<title>Payment</title>
 	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -70,9 +70,11 @@ function verifyPayment(orderId, paymentId, signature) {
      $.post("/verify", { orderId: orderId, paymentId: paymentId, signature: signature })
          .done(function(isValid) {
              if (isValid) {
-                 console.log("Payment successful");
+                 alert("Payment successful");
+                 window.location.href = 'payment-success';
              } else {
-                 console.log("Payment failed");
+                 alert("Payment failed");
+                 window.location.href = 'payment-failure';
              }
          })
          .fail(function(error) {
